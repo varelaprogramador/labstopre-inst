@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white min-w-full overflow-x-hidden ">
 
-      <section className="flex flex-col justify-between text-white  w-full bg-[url('/banner-home.png')] bg-cover bg-center bg-no-repeat min-h-[80vh] py-[14px] px-[12vw] ">
+      <section className="flex flex-col justify-between text-white  w-full bg-[url('/banner-home.png')] bg-cover bg-center bg-no-repeat min-h-[80vh] py-[14px] px-[12vw] max-md:px-16 ">
         <div className="bg-transparent w-full flex justify-between items-center  py-4 ">
           <Image
             src="/logo.png"
@@ -11,7 +11,7 @@ export default function Home() {
             height={60}
             alt={'logo'}
           ></Image>
-          <nav className="flex gap-4">
+          <nav className="flex gap-4 max-md:hidden">
             <p>Inicio</p>
             <p>Serviço</p>
             <p>Produtos</p>
@@ -21,7 +21,7 @@ export default function Home() {
             <p>Blog</p>
           </nav>
         </div>
-        <div className='w-[55%]'>
+        <div className='w-[55%] max-md:w-full'>
           <p>EQUIPAMENTOS PARA CLASSIFICAÇÃO DE GRÃOS</p>
           <h1 className='text-4xl font-bold'>
             Acompanhe com precisão a qualidade dos grãos
@@ -69,7 +69,7 @@ export default function Home() {
           <h2 className='font-bold text-4xl border-l-[1px] border-green-800 self-start px-2'>Medidores de Umidade de Grãos com qualidade Labstore</h2>
           <p className='self-start mt-4 text-sm'>Aparelhos de altíssima precisão, para todos os tipos de grãos e necessidades.</p>
         </div>
-        <div className='grid grid-cols-2 gap-4 max-md:grid-cols-1 py-[28px]'>
+        <div className='grid grid-cols-2 gap-4 max-md:grid-cols-1 py-[80px]'>
           <article className='border shadow-sm flex flex-col gap-4 pb-4 px-4 justify-center items-center '>
             <Image src={"/item-1.avif"} width={300} height={50} alt='imagem do equipamento'></Image>
             <h1 className='font-semibold'>medidor de Umidade de grãos de bancada g2000  </h1>
@@ -112,7 +112,7 @@ export default function Home() {
           </article>
         </div>
         <div className=' flex justify-center'>
-          <button className='bg-green-600 p-[8px] text-white text-sm mt-4 rounded-md'>
+          <button className='bg-green-600 p-[8px] text-white text-sm  rounded-md'>
             MAIS PRODUTOS
           </button></div>
 
@@ -185,7 +185,7 @@ export default function Home() {
 </div>
         </div>
          </section>
-         <section className='flex gap-4 py-[28px] px-[12vw] justify-center items-center max-md:flex-col'>
+         <section className='flex gap-4 py-[170px] px-[12vw] justify-center items-center max-md:flex-col'>
           <div>
 <Image src={"/local.jpg"} width={750} height={400} alt='teste' className='border-2 border-green-800'></Image>
           </div>
@@ -211,7 +211,98 @@ export default function Home() {
           </div>
 
          </section>
+         <section className='flex flex-col  gap-4 py-[170px] px-[12vw] justify-center items-center  bg-[#F5FAEE]'>
+         <p className='text-green-800 font-semibold '>DEPOIMENTOS DE CLIENTES</p>
+         <h2 className='text-5xl font-semibold border-l-2 border-green-800 pl-1'>Conheça a opinião de quem conhece e usa os Medidores de Umidade Labstore</h2>
+         <div className=' grid grid-cols-2 gap-8 max-md:grid-cols-1'>
+          <div className='flex flex-col gap-4'>
+          <div className='p-4 bg-white shadow-sm text-gray-400 font-light' >
+            <p>Tenho uma parceria de longa data com vocês, e sempre me ajudam muito nas decisões durante a colheita. Hoje em dia, a agilidade é essencial; o produtor não pode perder tempo pensando, precisa ter as ferramentas na mão para decidir na hora. O medidor de umidade de vocês é muito bom, porque é portátil e prático. Eu levo para todos os lotes durante a colheita, faço a amostra na hora e já sei se posso colher em 2 ou 3 dias.</p>
+          </div>
+          <div className='text-center'>
+          <h2>Valéria Ribeiro</h2>
+          <p className='text-green-800'>Rossato e Filhas - Sertanópolis (PR)</p>
+        </div>
+          </div>
+          <div  className='flex flex-col gap-4'>
+          <div className='p-4 bg-white shadow-sm text-gray-400 font-light' >
+            <p>Tenho uma parceria de longa data com vocês, e sempre me ajudam muito nas decisões durante a colheita. Hoje em dia, a agilidade é essencial; o produtor não pode perder tempo pensando, precisa ter as ferramentas na mão para decidir na hora. O medidor de umidade de vocês é muito bom, porque é portátil e prático. Eu levo para todos os lotes durante a colheita, faço a amostra na hora e já sei se posso colher em 2 ou 3 dias.</p>
+          </div>
+          
+          <div className='text-center'>
+            <h2>Renan Coelho</h2>
+            <p className='text-green-800'>Fazenda Flor da Serra - Cornélio Procópio (PR)</p>
+          </div>
+          </div>
+         </div>
+            
+         </section>
+         <section className='flex flex-col  py-[170px] px-[12vw] justify-center items-center min-h-[70vh]'>
+          <p className='text-green-800 font-bold'>BLOG</p>
+          <h2 className='text-4xl font-medium'>Saiba mais sobre a Labstore</h2>
+          <div className='grid grid-cols-3 gap-8 mt-16 max-md:grid-cols-1'>
+            <div className='border flex flex-col rounded-md gap-4 transition-all duration-300 hover:scale-110'>
+              <div className='bg-black min-h-[300px] min-w-full rounded-md '></div>
+              <div className='p-4'>
+              <h1>Aliados a Tecnologia</h1>
+              <p className='text-gray-400'>Aliada à tecnologia, produção de soja no Paraná deve superar 22 milhões de toneladas...</p>
+</div>
+            </div>
+            <div className='border flex flex-col rounded-md gap-4 transition-all duration-300 hover:scale-110'>
+              <div className='bg-black min-h-[300px] min-w-full rounded-md '></div>
+              <div className='p-4'>
+              <h1>Aliados a Tecnologia</h1>
+              <p className='text-gray-400'>Aliada à tecnologia, produção de soja no Paraná deve superar 22 milhões de toneladas...</p>
+</div>
+            </div>
+            <div className='border flex flex-col rounded-md gap-4 transition-all duration-300 hover:scale-110'>
+              <div className='bg-black min-h-[300px] min-w-full rounded-md '></div>
+              <div className='p-4'>
+              <h1>Aliados a Tecnologia</h1>
+              <p className='text-gray-400'>Aliada à tecnologia, produção de soja no Paraná deve superar 22 milhões de toneladas...</p>
+</div>
+            </div>
+          </div>
+          <button className='bg-green-600 text-white p-[16px] text-sm mt-16 rounded-md'>
+          CONHECER BLOG
+          </button>
+         </section>
+         <div className='bg-[#23622C] w-full min-w-[300px] max-w-[1000px]  p-8 pb-10 mb-[-20px]   hidden max-md:flex flex-col z-10'>
+            <div className='flex flex-col text-white justify-center p-4'>
+              <p>NEWSLETTER</p>
+              <h2 className='text-4xl font-semibold'>Cadastre-se na Newsletter da Labstore!</h2>
+              <p>Faça seu cadastro gratuitamente e comece a ficar por dentro de todas as novidades e promoções da Labstore!</p>
+            </div>
+            <div className='flex flex-col gap-4 justify-center text-white items-start w-full p-4'>
+            <label>Nome</label>
+              <input type='text' placeholder='Digite seu nome aqui ...' className='p-2 rounded-sm w-full text-black'></input>
+              <label>Email</label>
+              <input type='text' placeholder='Digite seu email aqui ...'  className='p-2 rounded-sm w-full text-black'></input>
+              <button className='bg-green-600 hover:bg-green-900 transition-all duration-300 p-4 self-end text-sm mt-4 rounded-md'>
+            Enviar Email
+          </button>
+            </div>
 
+          </div>
+         <footer className='min-h-[50vh] bg-[#091F0C] relative flex flex-col justify-center items-center  rounded-t-3xl z-20'>
+          <div className='bg-[#23622C] w-[65vw] min-w-[300px] max-w-[1000px] top-[-80px] rounded-3xl absolute p-8  flex max-md:hidden'>
+            <div className='flex flex-col text-white justify-center p-4'>
+              <p>NEWSLETTER</p>
+              <h2 className='text-4xl font-semibold'>Cadastre-se na Newsletter da Labstore!</h2>
+              <p>Faça seu cadastro gratuitamente e comece a ficar por dentro de todas as novidades e promoções da Labstore!</p>
+            </div>
+            <div className='flex flex-col gap-4 justify-center text-white items-start w-full p-4'>
+            <label>Nome</label>
+              <input type='text' placeholder='Digite seu nome aqui ...' className='p-2 rounded-sm w-full text-black'></input>
+              <label>Email</label>
+              <input type='text' placeholder='Digite seu email aqui ...'  className='p-2 rounded-sm w-full text-black'></input>
+              <button className='bg-green-600 hover:bg-green-900 transition-all duration-300 p-4 self-end text-sm mt-4 rounded-md'>
+            Enviar Email
+          </button>
+            </div>
+
+          </div>
+         </footer>
 
     </div>
   );
