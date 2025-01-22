@@ -117,31 +117,31 @@ export default function Home() {
           </button></div>
 
 
-        <div className='flex justify-center items-center mt-[128px] max-md:flex-col max-md:gap-4'>
+        <div className='flex justify-center items-center mt-[128px] max-md:flex-col  gap-4'>
           <div className='flex flex-col text-center'>
-            <div className='flex flex-col border-gray-100 border-b-[1px] p-4 justify-center items-center'>
-              <h2 className=' text-green-800 font-bold text-4xl'>38</h2>
+            <div className='flex flex-col border-gray-100 hover:bg-gray-50 transition-all duration-300 border-b-[1px] p-4 justify-center items-center'>
+              <h2 className=' text-green-800 font-bold text-6xl'>38</h2>
               <p className=" text-sm font-semibold">ANOS DE EXPERIÊNCIA</p>
             </div>
-            <div className='flex flex-col border-gray-100 border-b-[1px] p-4 justify-center items-center'>
-              <h2 className=' text-green-800 font-bold text-4xl'>+1,000</h2>
+            <div className='flex flex-col border-gray-100 border-b-[1px] hover:bg-gray-50 transition-all duration-300 p-4 justify-center items-center'>
+              <h2 className=' text-green-800 font-bold text-6xl'>+1,000</h2>
               <p className=" text-sm font-semibold">VENDIDOS</p>
             </div>
-            <div className='flex flex-col border-gray-100 border-b-[1px] p-4 justify-center items-center'>
-              <h2 className=' text-green-800 font-bold text-4xl'>255</h2>
+            <div className='flex flex-col border-gray-100 border-b-[1px] hover:bg-gray-50 transition-all duration-300 p-4 justify-center items-center'>
+              <h2 className=' text-green-800 font-bold text-6xl'>255</h2>
               <p className=" text-sm font-semibold">CIDADES ATENDIDAS</p>
             </div>
-            <div className='flex flex-col justify-center p-4 items-center'>
-              <h2 className=' text-green-800 font-bold text-4xl'>15</h2>
+            <div className='flex flex-col justify-center p-4 hover:bg-gray-50 transition-all duration-300 items-center'>
+              <h2 className=' text-green-800 font-bold text-6xl'>15</h2>
               <p className=" text-sm font-semibold">ESTADOS ATENDIDOS</p>
             </div>
 
           </div>
-          <div className='bg-[url("/medidores.avif")] bg-cover rounded-md min-h-[400px] min-w-[300px]'>
+          <div className='bg-[url("/medidores.avif")] bg-cover  rounded-md min-h-[600px] min-w-[300px] w-[25vw] h-[65vh] max-w-[600px] max-h-[900px]'>
           </div>
-          <div className='flex flex-col max-w-[400px] px-4'>
+          <div className='flex flex-col max-w-[35vw] max-md:max-w-[500px] px-4'>
             <p className='text-green-800 font-semibold self-start'> SERVIÇOS</p>
-            <h2 className='font-bold text-xl border-l-[1px] border-green-800 self-start px-2'>Você sabia que nós também somos especializados em manutenções?</h2>
+            <h2 className='font-bold text-4xl border-l-[1px] border-green-800 self-start px-2'>Você sabia que nós também somos especializados em manutenções?</h2>
             <p className='self-start mt-4 text-sm'>A Labstore é a solução completa que você precisa, criada especialmente para atender os profissionais que buscam adquirir equipamentos de qualidade e contar com serviços de manutenção especializados. </p>
             <div className='grid grid-cols-2 mt-4 gap-4'>
               <div className='flex gap-4 items-center bg-green-50 rounded-md text-sm p-2'><Image src={"/medalha.svg"} alt='icon' width={40} height={40}></Image> Qualidade Labstore.</div>
@@ -184,6 +184,32 @@ export default function Home() {
   <p>Graças à sua tecnologia avançada, os modelos Labstore oferecem leituras extremamente precisas, garantindo confiança nos resultados.</p>
 </div>
         </div>
+         </section>
+         <section className='flex gap-4 py-[28px] px-[12vw] justify-center items-center max-md:flex-col'>
+          <div>
+<Image src={"/local.jpg"} width={750} height={400} alt='teste' className='border-2 border-green-800'></Image>
+          </div>
+          <div className='flex flex-col gap-4 justify-between min-h-[35vh]'>
+            <h2 className='text-5xl font-semibold border-l-2 border-green-800 pl-1'>Procure a labstore mais próxima</h2>
+            <p className='text-gray-600'>Conheça nossas unidades e revendas pelo Brasil</p>
+            <div className='grid grid-cols-2 max-lg:grid-cols-1 gap-8 mt-3'>
+              <div className='px-4'>
+                <p className='text-green-800 text-lg'>Cidade: Curitiba – PR</p>
+                <p className=' text-lg'>Tel: (41) 3269-8900</p>
+                <p className=' text-lg'>E-mail: labstore@labstore.com.br</p>
+                <p className='text-gray-500'>Endereço: Rua da Divina Providência, 79 Santa Quitéria</p>
+                <p className='text-gray-700 mt-4'>CEP: 80310-010</p>
+              </div>
+              <div className='px-4'>
+                <p className='text-green-800 text-lg'>Cidade: Curitiba – PR</p>
+                <p className=' text-lg'>Tel: (43) 3327-4110</p>
+                <p className=' text-lg'>E-mail: labstore@labstore.com.br</p>
+                <p className='text-gray-500'>Endereço: Rua Deputado Nilson Ribas, 711Jd. Bancários</p>
+                <p className='text-gray-700 mt-4'>CEP: 86062-090</p>
+              </div>
+            </div>
+          </div>
+
          </section>
 
 
