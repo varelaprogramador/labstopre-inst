@@ -159,7 +159,8 @@ export default function Home() {
              </div>
         </div>
       </section>
-      <section className='flex flex-col py-[28px] px-[18vw] rounded-md min-h-screen text-white bg-green-800 justify-center items-center'>
+      <section className='p-8 bg-white'>
+        <div className='flex flex-col py-[28px] px-[18vw] rounded-md min-h-screen text-white bg-green-800 justify-center items-center'>
         <h2>BENEFÍCIOS</h2>
         <h1 className='text-4xl font-semibold'>Controle de qualidade de grãos com excelência</h1>
         <div className='grid grid-cols-2  gap-8 max-md:grid-cols-1  mt-10'> 
@@ -183,6 +184,7 @@ export default function Home() {
   <h2 className="font-semibold">Medidor de alta precisão</h2>
   <p>Graças à sua tecnologia avançada, os modelos Labstore oferecem leituras extremamente precisas, garantindo confiança nos resultados.</p>
 </div>
+        </div>
         </div>
          </section>
          <section className='flex gap-4 py-[170px] px-[18vw] justify-center items-center max-md:flex-col'>
