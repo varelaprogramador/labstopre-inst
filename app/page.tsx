@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white min-w-full overflow-x-hidden ">
 
-      <section className="flex flex-col justify-between text-white  w-full bg-[url('/banner-home.png')] bg-cover bg-center bg-no-repeat min-h-[80vh] py-[14px] px-[12vw] max-md:px-16 ">
+      <section className="flex flex-col justify-between text-white  w-full bg-[url('/banner.png')] bg-cover bg-center bg-no-repeat min-h-[85vh] py-[14px] px-[18vw] max-md:px-16 ">
         <div className="bg-transparent w-full flex justify-between items-center  py-4 ">
           <Image
             src="/logo.png"
@@ -23,19 +23,19 @@ export default function Home() {
         </div>
         <div className='w-[55%] max-md:w-full'>
           <p>EQUIPAMENTOS PARA CLASSIFICAÇÃO DE GRÃOS</p>
-          <h1 className='text-4xl font-bold'>
+          <h1 className='text-5xl font-bold'>
             Acompanhe com precisão a qualidade dos grãos
           </h1>
           <h2>A  Labstore possui uma linha completa de medidores de umidade de grãos
 
             altamente precisos e confiáveis.</h2>
-          <button className='bg-green-600 p-[8px] text-sm mt-4 rounded-md'>
+          <button className='bg-green-600 p-[16px] text-sm mt-4 rounded-md font-semibold'>
             VER MEDIDORES
           </button>
         </div>
         <div className=''></div>
       </section>
-      <section className='flex flex-col py-[28px] px-[12vw]'>
+      <section className='flex flex-col py-[28px] px-[18vw]'>
         <div className='flex  items-center justify-evenly font-medium text-sm text-center pb-[28px]'>
           <div className='flex flex-col min-h-[100px] gap-4  justify-center items-center '>
             <Image src="/ervilha.svg" width={50} height={100} alt='icon-ervilha'></Image>
@@ -57,13 +57,13 @@ export default function Home() {
         <div className='mt-9 flex flex-col justify-center items-center'>
           <p className='text-green-800 font-semibold self-start'> SOBRE NÓS</p>
           <h2 className='font-bold text-4xl'>Entenda porque a Labstore é referência no setor agrícola -<span className='text-green-800'> Produtos de Alta Precisão</span></h2>
-          <div className='w-full min-h-[550px] bg-gray-300 rounded-md mt-4'>{/* VIDEO*/}</div>
+          <div className='w-full min-h-[550px] bg-gray-300 rounded-md mt-4 flex justify-center items-center'>VIDEO</div>
           <button className='bg-green-600 p-[8px] text-sm mt-4 rounded-md text-white'>
             VER MEDIDORES
           </button>
         </div>
       </section>
-      <section className='flex flex-col py-[28px] px-[12vw]'>
+      <section className='flex flex-col py-[28px] px-[18vw]'>
         <div className='flex flex-col justify-center items-center'>
           <p className='text-green-800 font-semibold self-start'> MEDIDORES</p>
           <h2 className='font-bold text-4xl border-l-[1px] border-green-800 self-start px-2'>Medidores de Umidade de Grãos com qualidade Labstore</h2>
@@ -137,18 +137,18 @@ export default function Home() {
             </div>
 
           </div>
-          <div className='bg-[url("/medidores.avif")] bg-cover  rounded-md min-h-[600px] min-w-[300px] w-[25vw] h-[65vh] max-w-[600px] max-h-[900px]'>
+          <div className='bg-[url("/medidores.avif")] bg-cover  rounded-md min-h-[600px] min-w-[300px] w-[20vw] h-[65vh] max-w-[600px] max-h-[900px]'>
           </div>
           <div className='flex flex-col max-w-[35vw] max-md:max-w-[500px] px-4'>
             <p className='text-green-800 font-semibold self-start'> SERVIÇOS</p>
             <h2 className='font-bold text-4xl border-l-[1px] border-green-800 self-start px-2'>Você sabia que nós também somos especializados em manutenções?</h2>
             <p className='self-start mt-4 text-sm'>A Labstore é a solução completa que você precisa, criada especialmente para atender os profissionais que buscam adquirir equipamentos de qualidade e contar com serviços de manutenção especializados. </p>
             <div className='grid grid-cols-2 mt-4 gap-4'>
-              <div className='flex gap-4 items-center bg-green-50 rounded-md text-sm p-2'><Image src={"/medalha.svg"} alt='icon' width={40} height={40}></Image> Qualidade Labstore.</div>
+              <div className='flex gap-4 items-center bg-gray-50 rounded-md text-sm p-2'><Image src={"/medalha.svg"} alt='icon' width={65} height={65}></Image> Qualidade Labstore.</div>
 
-              <div className='flex gap-4 items-center bg-green-50 rounded-md text-sm p-2'><Image src={"/refresh.svg"} alt='icon' width={40} height={40}></Image> Equipamento Atualizado.</div>
-              <div className='flex gap-4 items-center bg-green-50 rounded-md text-sm p-2'><Image src={"/money.svg"} alt='icon' width={40} height={40}></Image> Preços acessíveis.</div>
-              <div className='flex gap-4 items-center bg-green-50 rounded-md text-sm p-2'><Image src={"/SAC.svg"} alt='icon' width={40} height={40}></Image> Assistência Técnica.</div>
+              <div className='flex gap-4 items-center bg-gray-50 rounded-md text-sm p-2'><Image src={"/refresh.svg"} alt='icon' width={65} height={65}></Image> Equipamento Atualizado.</div>
+              <div className='flex gap-4 items-center bg-gray-50 rounded-md text-sm p-2'><Image src={"/money.svg"} alt='icon' width={65} height={65}></Image> Preços acessíveis.</div>
+              <div className='flex gap-4 items-center bg-gray-50 rounded-md text-sm p-2'><Image src={"/SAC.svg"} alt='icon' width={65} height={65}></Image> Assistência Técnica.</div>
          <div className='col-span-2 flex items-center justify-center'>
          <button className='bg-green-600 p-[8px] text-sm text-white mt-4 rounded-md'>
            QUERO SABER MAIS
@@ -159,7 +159,7 @@ export default function Home() {
              </div>
         </div>
       </section>
-      <section className='flex flex-col py-[28px] px-[12vw] rounded-md min-h-screen text-white bg-green-800 justify-center items-center'>
+      <section className='flex flex-col py-[28px] px-[18vw] rounded-md min-h-screen text-white bg-green-800 justify-center items-center'>
         <h2>BENEFÍCIOS</h2>
         <h1 className='text-4xl font-semibold'>Controle de qualidade de grãos com excelência</h1>
         <div className='grid grid-cols-2  gap-8 max-md:grid-cols-1  mt-10'> 
@@ -185,7 +185,7 @@ export default function Home() {
 </div>
         </div>
          </section>
-         <section className='flex gap-4 py-[170px] px-[12vw] justify-center items-center max-md:flex-col'>
+         <section className='flex gap-4 py-[170px] px-[18vw] justify-center items-center max-md:flex-col'>
           <div>
 <Image src={"/local.jpg"} width={750} height={400} alt='teste' className='border-2 border-green-800'></Image>
           </div>
@@ -211,7 +211,7 @@ export default function Home() {
           </div>
 
          </section>
-         <section className='flex flex-col  gap-4 py-[170px] px-[12vw] justify-center items-center  bg-[#F5FAEE]'>
+         <section className='flex flex-col  gap-4 py-[170px] px-[18vw] justify-center items-center  bg-[#F5FAEE]'>
          <p className='text-green-800 font-semibold '>DEPOIMENTOS DE CLIENTES</p>
          <h2 className='text-5xl font-semibold border-l-2 border-green-800 pl-1'>Conheça a opinião de quem conhece e usa os Medidores de Umidade Labstore</h2>
          <div className=' grid grid-cols-2 gap-8 max-md:grid-cols-1'>
@@ -237,29 +237,29 @@ export default function Home() {
          </div>
             
          </section>
-         <section className='flex flex-col  py-[170px] px-[12vw] justify-center items-center min-h-[70vh]'>
+         <section className='flex flex-col  py-[170px] px-[18vw] justify-center items-center min-h-[70vh]'>
           <p className='text-green-800 font-bold'>BLOG</p>
           <h2 className='text-4xl font-medium'>Saiba mais sobre a Labstore</h2>
           <div className='grid grid-cols-3 gap-8 mt-16 max-md:grid-cols-1'>
             <div className='border flex flex-col rounded-md gap-4 transition-all duration-300 hover:scale-110'>
-              <div className='bg-black min-h-[300px] min-w-full rounded-md '></div>
+              <div className='bg-[url("/noticia-1.png")] bg-cover min-h-[300px] min-w-full rounded-md '></div>
               <div className='p-4'>
               <h1>Aliados a Tecnologia</h1>
               <p className='text-gray-400'>Aliada à tecnologia, produção de soja no Paraná deve superar 22 milhões de toneladas...</p>
 </div>
             </div>
             <div className='border flex flex-col rounded-md gap-4 transition-all duration-300 hover:scale-110'>
-              <div className='bg-black min-h-[300px] min-w-full rounded-md '></div>
+              <div className='bg-[url("/noticia-2.png")] bg-cover min-h-[300px] min-w-full rounded-md '></div>
               <div className='p-4'>
-              <h1>Aliados a Tecnologia</h1>
-              <p className='text-gray-400'>Aliada à tecnologia, produção de soja no Paraná deve superar 22 milhões de toneladas...</p>
+              <h1>Nova tecnologia de ponta</h1>
+              <p className='text-gray-400'>Nova tecnologia de ponta para melhorar a qualidade no armazenamento de grãos...</p>
 </div>
             </div>
             <div className='border flex flex-col rounded-md gap-4 transition-all duration-300 hover:scale-110'>
-              <div className='bg-black min-h-[300px] min-w-full rounded-md '></div>
+              <div className='bg-[url("/noticia-3.jpg")] bg-cover min-h-[300px] min-w-full rounded-md '></div>
               <div className='p-4'>
-              <h1>Aliados a Tecnologia</h1>
-              <p className='text-gray-400'>Aliada à tecnologia, produção de soja no Paraná deve superar 22 milhões de toneladas...</p>
+              <h1>Parceria entre Labstore e UEM </h1>
+              <p className='text-gray-400'>Parceria entre Labstore e UEM fortalece formação prática em Engenharia Agrícola</p>
 </div>
             </div>
           </div>
@@ -284,7 +284,7 @@ export default function Home() {
             </div>
 
           </div>
-         <footer className='min-h-[50vh] bg-[#091F0C] relative flex flex-col justify-center items-center  rounded-t-3xl z-20'>
+         <footer className='min-h-[50vh] bg-[#091F0C] relative flex flex-col justify-center items-center  rounded-t-3xl z-20 shadow-md'>
           <div className='bg-[#23622C] w-[65vw] min-w-[300px] max-w-[1000px] top-[-80px] rounded-3xl absolute p-8  flex max-md:hidden'>
             <div className='flex flex-col text-white justify-center p-4'>
               <p>NEWSLETTER</p>
