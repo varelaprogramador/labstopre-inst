@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white min-w-full overflow-x-hidden ">
 
-      <section className="flex flex-col justify-between text-white  w-full bg-[url('/banner.png')] bg-cover bg-center bg-no-repeat min-h-[85vh] py-[14px] px-[18vw] max-md:px-16 ">
+      <section className="flex flex-col justify-between text-white  w-full bg-[url('/banner.png')] bg-cover bg-center bg-no-repeat min-h-[85vh] py-[14px] px-[18vw] max-md:px-5 ">
         <div className="bg-transparent w-full flex justify-between items-center  py-4 ">
           <Image
             src="/logo.png"
@@ -21,10 +21,10 @@ export default function Home() {
             <p>Blog</p>
           </nav>
         </div>
-        <div className='w-[55%] max-md:w-full'>
+        <div className='w-[55%] max-md:w-full flex-col flex gap-2'>
           <p>EQUIPAMENTOS PARA CLASSIFICAÇÃO DE GRÃOS</p>
-          <h1 className='text-5xl font-bold'>
-            Acompanhe com precisão a qualidade dos grãos
+          <h1 className='text-5xl font-bold '>
+            Acompanhe com precisão a qualidade dos grãos
           </h1>
           <h2>A  Labstore possui uma linha completa de medidores de umidade de grãos
 
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
         <div className=''></div>
       </section>
-      <section className='flex flex-col py-[28px] px-[18vw]'>
+      <section className='flex flex-col py-[28px] px-[18vw]  max-md:px-5'>
         <div className='flex  items-center justify-evenly font-medium text-sm text-center pb-[28px]'>
           <div className='flex flex-col min-h-[100px] gap-4  justify-center items-center '>
             <Image src="/ervilha.svg" width={50} height={100} alt='icon-ervilha'></Image>
@@ -63,7 +63,7 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className='flex flex-col py-[28px] px-[18vw]'>
+      <section className='flex flex-col py-[28px] px-[18vw]  max-md:px-5'>
         <div className='flex flex-col justify-center items-center'>
           <p className='text-green-800 font-semibold self-start'> MEDIDORES</p>
           <h2 className='font-bold text-4xl border-l-[1px] border-green-800 self-start px-2'>Medidores de Umidade de Grãos com qualidade Labstore</h2>
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
         </div>
          </section>
-         <section className='flex gap-4 py-[170px] px-[18vw] justify-center items-center max-md:flex-col'>
+         <section className='flex gap-4 py-[170px] px-[18vw] justify-center items-center max-md:flex-col  max-md:px-5'>
           <div>
 <Image src={"/local.jpg"} width={750} height={400} alt='teste' className='border-2 border-green-800'></Image>
           </div>
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
 
          </section>
-         <section className='flex flex-col  gap-4 py-[170px] px-[18vw] justify-center items-center  bg-[#F5FAEE]'>
+         <section className='flex flex-col  gap-4 py-[170px] px-[18vw] justify-center items-center  bg-[#F5FAEE]  max-md:px-5'>
          <p className='text-green-800 font-semibold '>DEPOIMENTOS DE CLIENTES</p>
          <h2 className='text-5xl font-semibold border-l-2 border-green-800 pl-1'>Conheça a opinião de quem conhece e usa os Medidores de Umidade Labstore</h2>
          <div className=' grid grid-cols-2 gap-8 max-md:grid-cols-1'>
@@ -239,7 +239,7 @@ export default function Home() {
          </div>
             
          </section>
-         <section className='flex flex-col  py-[170px] px-[18vw] justify-center items-center min-h-[70vh]'>
+         <section className='flex flex-col  py-[170px] px-[18vw] justify-center items-center min-h-[70vh]  max-md:px-5'>
           <p className='text-green-800 font-bold'>BLOG</p>
           <h2 className='text-4xl font-medium'>Saiba mais sobre a Labstore</h2>
           <div className='grid grid-cols-3 gap-8 mt-16 max-md:grid-cols-1'>
@@ -269,7 +269,7 @@ export default function Home() {
           CONHECER BLOG
           </button>
          </section>
-         <div className='bg-[#23622C] w-full min-w-[300px] max-w-[1000px]  p-8 pb-10 mb-[-20px]   hidden max-md:flex flex-col z-10'>
+         <div className='bg-[#23622C] w-full min-w-[300px] max-w-[1000px]  p-8 pb-10 mb-[-20px]   hidden max-md:flex flex-col z-10  max-md:px-5'>
             <div className='flex flex-col text-white justify-center p-4'>
               <p>NEWSLETTER</p>
               <h2 className='text-4xl font-semibold'>Cadastre-se na Newsletter da Labstore!</h2>
@@ -287,7 +287,7 @@ export default function Home() {
 
           </div>
          <footer className='min-h-[50vh] bg-[#091F0C] relative flex flex-col justify-center items-center  rounded-t-3xl z-20 shadow-md'>
-          <div className='bg-[#23622C] w-[65vw] min-w-[300px] max-w-[1000px] top-[-80px] rounded-3xl absolute p-8  flex max-md:hidden'>
+          <div className='bg-[#23622C] w-[65vw] min-w-[300px] max-w-[1000px] top-[-80px] rounded-3xl absolute p-8  flex max-md:hidden  max-md:px-5'>
             <div className='flex flex-col text-white justify-center p-4'>
               <p>NEWSLETTER</p>
               <h2 className='text-4xl font-semibold'>Cadastre-se na Newsletter da Labstore!</h2>
@@ -304,6 +304,7 @@ export default function Home() {
             </div>
 
           </div>
+          
          </footer>
 
     </div>
