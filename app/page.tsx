@@ -159,10 +159,10 @@ export default function Home() {
              </div>
         </div>
       </section>
-      <section className='p-8 bg-white'>
+      <section className='p-8 bg-white max-md:p-0'>
         <div className='flex flex-col py-[28px] px-[18vw] rounded-md min-h-screen text-white bg-green-800 justify-center items-center'>
         <h2>BENEFÍCIOS</h2>
-        <h1 className='text-4xl font-semibold'>Controle de qualidade de grãos com excelência</h1>
+        <h1 className='text-4xl font-semibold max-md:text-center'>Controle de qualidade de grãos com excelência</h1>
         <div className='grid grid-cols-2  gap-8 max-md:grid-cols-1  mt-10'> 
 <div className="flex flex-col items-center justify-center text-center gap-2">
   <Image  width={300}  className='rounded-full' height={50} src={"/card-1.png"} alt='card' />
