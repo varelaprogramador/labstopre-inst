@@ -219,21 +219,21 @@ export default function Home() {
          <div className=' grid grid-cols-2 gap-8 max-md:grid-cols-1'>
           <div className='flex flex-col gap-4'>
           <div className='p-4 bg-white shadow-sm text-gray-400 font-light' >
-            <p>Tenho uma parceria de longa data com vocês, e sempre me ajudam muito nas decisões durante a colheita. Hoje em dia, a agilidade é essencial; o produtor não pode perder tempo pensando, precisa ter as ferramentas na mão para decidir na hora. O medidor de umidade de vocês é muito bom, porque é portátil e prático. Eu levo para todos os lotes durante a colheita, faço a amostra na hora e já sei se posso colher em 2 ou 3 dias.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oiNUSIlgGj4?si=wW5S3kNz6oCHbfZW" title="YouTube video player" ></iframe>
           </div>
           <div className='text-center'>
-          <h2>Valéria Ribeiro</h2>
-          <p className='text-green-800'>Rossato e Filhas - Sertanópolis (PR)</p>
+          {/* <h2>Valéria Ribeiro</h2>
+          <p className='text-green-800'>Rossato e Filhas - Sertanópolis (PR)</p> */}
         </div>
           </div>
           <div  className='flex flex-col gap-4'>
           <div className='p-4 bg-white shadow-sm text-gray-400 font-light' >
-            <p>Tenho uma parceria de longa data com vocês, e sempre me ajudam muito nas decisões durante a colheita. Hoje em dia, a agilidade é essencial; o produtor não pode perder tempo pensando, precisa ter as ferramentas na mão para decidir na hora. O medidor de umidade de vocês é muito bom, porque é portátil e prático. Eu levo para todos os lotes durante a colheita, faço a amostra na hora e já sei se posso colher em 2 ou 3 dias.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/bSdZHRJSh04?si=p8jTE5fTcOyq85w8" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
           </div>
           
           <div className='text-center'>
-            <h2>Renan Coelho</h2>
-            <p className='text-green-800'>Fazenda Flor da Serra - Cornélio Procópio (PR)</p>
+            {/* <h2>Renan Coelho</h2>
+            <p className='text-green-800'>Fazenda Flor da Serra - Cornélio Procópio (PR)</p> */}
           </div>
           </div>
          </div>
