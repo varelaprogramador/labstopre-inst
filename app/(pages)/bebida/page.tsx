@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 export default function bebida() {
   return (
     <div className="flex flex-col min-h-screen bg-white min-w-full overflow-x-hidden ">
@@ -12,13 +13,16 @@ export default function bebida() {
             alt={'logo'}
           ></Image>
           <nav className="flex gap-4 max-md:hidden">
-            <p>Inicio</p>
-            <p>Serviço</p>
-            <p>Produtos</p>
-            <p>Sobre</p>
-            <p>Contato</p>
+            <Link href={"/"}><p>Inicio</p></Link>
+            <Link href={"/"}><p>Serviço</p></Link>
+            <Link href={"/"}><p>Produtos</p></Link>
+            <Link href={"/"}><p>Sobre</p></Link>
+            <Link href={"/"}><p>Contato</p></Link>
+            <Link href={"/"}><p>Blog</p></Link>
+            
+          
 
-            <p>Blog</p>
+            
           </nav>
         </div>
         <div className='w-[55%] max-md:w-full flex-col flex gap-2'>
