@@ -160,6 +160,7 @@ export default function FormularioDialog() {
                                             defaultCountry="BR"
                                             placeholder="(00) 00000-0000"
                                             value={field.value || ""}
+                                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                             onChange={(value: any) => field.onChange(value)}
                                         />
                                     </FormControl>
