@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import '../globals.css';
 import Image from 'next/image';
+import FormularioDialog from './_components/form';
+import Video from './_components/video';
+
+
 export default function Home() {
 
   const produtos = [
@@ -59,9 +63,8 @@ export default function Home() {
           <h2>A  Labstore possui uma linha completa de medidores de umidade de grãos
 
             altamente precisos e confiáveis.</h2>
-          <button className='bg-green-600 p-[16px] text-sm mt-4 rounded-md font-semibold'>
-            VER MEDIDORES
-          </button>
+
+          <FormularioDialog></FormularioDialog>
         </div>
         <div className=''></div>
       </section>
@@ -88,10 +91,9 @@ export default function Home() {
         <div className='mt-9 flex flex-col justify-center items-center'>
           <p className='text-green-800 font-semibold self-start'> SOBRE NÓS</p>
           <h2 className='font-bold text-4xl  border-l-2 border-green-800 pl-4'>Entenda porque a Labstore é referência no setor agrícola -<span className='text-green-800'> Produtos de Alta Precisão</span></h2>
-          <div className='w-full min-h-[550px] bg-gray-300 rounded-md mt-4 flex justify-center items-center'>VIDEO</div>
-          <button className='bg-green-600 p-[12px] text-sm mt-4 rounded-md text-white'>
-            Mais produtos {'>'}
-          </button>
+          <div className='w-full  bg-gray-300 rounded-md mt-4 flex justify-center items-center mb-4'><Video src='/video-home.mp4' /></div>
+
+          <FormularioDialog></FormularioDialog>
         </div>
       </section>
       <section className='flex flex-col py-[28px] px-[18vw]  max-md:px-5'>

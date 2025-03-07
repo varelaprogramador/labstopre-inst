@@ -1,5 +1,6 @@
 
 
+import { Toaster } from "sonner";
 import "./globals.css";
 
 
@@ -19,9 +20,12 @@ export default function RootLayout({
       <body
         className={` antialiased`}
       >
-        
+
         {/*<HeaderPublic />*/}
         {children}
+        <Toaster
+          richColors
+        ></Toaster>
       </body>
     </html>
   );
