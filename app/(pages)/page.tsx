@@ -309,7 +309,7 @@ export default function Home() {
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(handleSubmit)}
-                className="space-y-4 text-black"
+                className="space-y-4 text-black bg-white rounded-md p-4"
               >
                 <FormField
                   name="name"
