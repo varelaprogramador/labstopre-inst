@@ -1,12 +1,28 @@
+"use client";
 import Link from 'next/link';
 import '../globals.css';
 import Image from 'next/image';
 import FormularioDialog from './_components/form';
 import Video from './_components/video';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Button } from '@/components/ui/button';
+import { PhoneInput } from './_components/phone-input';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Input } from '@/components/ui/input';
+import { z } from 'zod';
+import { useState } from 'react';
+import { toast } from "sonner";
+const formSchema = z.object({
+  name: z.string().min(1, "O Nome é obrigatório."),
+  email: z.string().min(1, "O Email  é obrigatório."),
+  phone: z.string().min(1, "O Telefone é obrigatório."),
+});
 
+type FormData = z.infer<typeof formSchema>;
 
 export default function Home() {
-
+  const [isOpen, setIsOpen] = useState(false)
   const produtos = [
     {
       image: "/medidores/item-1.avif",
@@ -33,6 +49,53 @@ export default function Home() {
       link: "/"
     },
   ];
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+    },
+  });
+
+  const handleSubmit = async (data: FormData) => {
+
+    try {
+      const response = await fetch(
+
+        "https://api.rd.services/platform/conversions?api_key=WoxYjvgqbQDKgjQUAzNMwnRcAFLxSqCtrAdY",
+        {
+          method: 'POST',
+          headers: { accept: 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event_type: 'CONVERSION',
+            event_family: 'CDP',
+            payload: {
+              conversion_identifier: 'Conversão Formulario- NEWSLETTER - HOME',
+              email: data.email,
+              name: data.name,
+              mobile_phone: data.phone
+            }
+          })
+        }
+      );
+
+      if (response.ok) {
+        console.log("Dados enviados com sucesso para RD Station!");
+        setIsOpen(false)
+        form.reset();
+
+        toast.success("Dados enviados com sucesso!");
+
+      } else {
+        console.error("Erro ao enviar os dados:", response.statusText);
+        toast.error("Erro ao enviar os dados!");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar os dados:", error);
+    }
+  };
+
 
   return (
     <div className="flex flex-col min-h-screen bg-white min-w-full overflow-x-hidden ">
@@ -243,13 +306,73 @@ export default function Home() {
             <p>Faça seu cadastro gratuitamente e comece a ficar por dentro de todas as novidades e promoções da Labstore!</p>
           </div>
           <div className='flex flex-col gap-4 justify-center text-white items-start w-full p-4'>
-            <label>Nome</label>
-            <input type='text' placeholder='Digite seu nome aqui ...' className='p-2 rounded-sm w-full text-black'></input>
-            <label>Email</label>
-            <input type='text' placeholder='Digite seu email aqui ...' className='p-2 rounded-sm w-full text-black'></input>
-            <button className='bg-green-600 hover:bg-green-900 transition-all duration-300 p-4 self-end text-sm mt-4 rounded-md'>
-              Enviar Email
-            </button>
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(handleSubmit)}
+                className="space-y-4 text-black"
+              >
+                <FormField
+                  name="name"
+                  control={form.control}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Nome</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          placeholder="Digite seu nome aqui ... "
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  name="email"
+                  control={form.control}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          type="email"
+                          placeholder="Digite seu e-mail aqui ... "
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  name="phone"
+                  control={form.control}
+                  render={({ field }) => (
+                    <FormItem >
+                      <FormLabel>WhatsApp</FormLabel>
+                      <FormControl>
+                        <PhoneInput
+                          {...field}
+                          defaultCountry="BR"
+                          placeholder="(00) 00000-0000"
+                          value={field.value || ""}
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          onChange={(value: any) => field.onChange(value)}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+
+                <Button type="submit" className="w-full" variant="default">
+                  Encaminhar meus Dados
+                </Button>
+
+              </form>
+            </Form>
+
           </div>
 
         </div>

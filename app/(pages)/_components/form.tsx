@@ -171,7 +171,7 @@ export default function FormularioDialog() {
 
                         <DialogFooter>
                             <Button type="submit" className="w-full" variant="default">
-                                Realizar minha recarga
+                                Enviar
                             </Button>
                         </DialogFooter>
                     </form>
