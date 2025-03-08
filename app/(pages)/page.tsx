@@ -224,6 +224,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className='p-8 bg-white max-md:p-0'>
         <div className='flex flex-col py-[28px] px-[18vw] rounded-md min-h-screen text-white bg-green-800 justify-center items-center'>
           <h2>BENEFÍCIOS</h2>
@@ -254,10 +255,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className='flex flex-col  gap-4 py-[170px] px-[18vw] justify-center items-center  bg-[#F5FAEE]  max-md:px-5'>
+        <p className='text-green-800 font-semibold '>DEPOIMENTOS DE CLIENTES</p>
+        <h2 className='text-5xl font-semibold border-l-2 border-green-800 pl-1'>Conheça a opinião de quem conhece e usa os Medidores de Umidade Labstore</h2>
+        <div className=' grid grid-cols-2 gap-8 max-md:grid-cols-1'>
+          <div className='flex flex-col gap-4'>
+            <div className='p-4 bg-white shadow-sm text-gray-400 font-light' >
+              <iframe width="510" height="315" src="https://www.youtube.com/embed/oiNUSIlgGj4?si=wW5S3kNz6oCHbfZW" title="YouTube video player" ></iframe>
+            </div>
+            <div className='text-center'>
+              {/* <h2>Valéria Ribeiro</h2>
+          <p className='text-purple-800'>Rossato e Filhas - Sertanópolis (PR)</p> */}
+            </div>
+          </div>
+          <div className='flex flex-col gap-4'>
+            <div className='p-4 bg-white shadow-sm text-gray-400 font-light' >
+              <iframe width="510" height="315" src="https://www.youtube.com/embed/bSdZHRJSh04?si=p8jTE5fTcOyq85w8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+            </div>
+
+            <div className='text-center'>
+              {/* <h2>Renan Coelho</h2>
+            <p className='text-purple-800'>Fazenda Flor da Serra - Cornélio Procópio (PR)</p> */}
+            </div>
+          </div>
+        </div>
+
+      </section>
       <section className='flex gap-4 py-[170px] px-[18vw] justify-center items-center max-md:flex-col  max-md:px-5'>
         <div>
           <Image src={"/local.jpg"} width={750} height={400} alt='teste' className='border-2 border-green-800'></Image>
         </div>
+
         <div className='flex flex-col gap-4 justify-between min-h-[35vh]'>
           <h2 className='text-5xl font-semibold border-l-2 border-green-800 pl-1'>Procure a labstore mais próxima</h2>
           <p className='text-gray-600'>Conheça nossas unidades e revendas pelo Brasil</p>
