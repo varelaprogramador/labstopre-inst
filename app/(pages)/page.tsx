@@ -299,7 +299,7 @@ export default function Home() {
               <p className='text-gray-700 mt-4'>CEP: 80310-010</p>
             </div>
             <div className='px-4'>
-              <p className='text-green-800 text-lg'>Cidade: Curitiba – PR</p>
+              <p className='text-green-800 text-lg'>Cidade: Londrina – PR</p>
               <p className=' text-lg'>Tel: (43) 3327-4110</p>
               <p className=' text-lg'>E-mail: labstore@labstore.com.br</p>
               <p className='text-gray-500'>Endereço: Rua Deputado Nilson Ribas, 711Jd. Bancários</p>
@@ -317,13 +317,72 @@ export default function Home() {
           <p>Faça seu cadastro gratuitamente e comece a ficar por dentro de todas as novidades e promoções da Labstore!</p>
         </div>
         <div className='flex flex-col gap-4 justify-center text-white items-start w-full p-4'>
-          <label>Nome</label>
-          <input type='text' placeholder='Digite seu nome aqui ...' className='p-2 rounded-sm w-full text-black'></input>
-          <label>Email</label>
-          <input type='text' placeholder='Digite seu email aqui ...' className='p-2 rounded-sm w-full text-black'></input>
-          <button className='bg-green-600 hover:bg-green-900 transition-all duration-300 p-4 self-end text-sm mt-4 rounded-md'>
-            Enviar Email
-          </button>
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(handleSubmit)}
+              className="space-y-4 text-black bg-white rounded-md p-4"
+            >
+              <FormField
+                name="name"
+                control={form.control}
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Nome</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        placeholder="Digite seu nome aqui ... "
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                name="email"
+                control={form.control}
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        type="email"
+                        placeholder="Digite seu e-mail aqui ... "
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                name="phone"
+                control={form.control}
+                render={({ field }) => (
+                  <FormItem >
+                    <FormLabel>WhatsApp</FormLabel>
+                    <FormControl>
+                      <PhoneInput
+                        {...field}
+                        defaultCountry="BR"
+                        placeholder="(00) 00000-0000"
+                        value={field.value || ""}
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        onChange={(value: any) => field.onChange(value)}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+
+              <Button type="submit" className="w-full" variant="default">
+                Encaminhar meus Dados
+              </Button>
+
+            </form>
+          </Form>
         </div>
 
       </div>
