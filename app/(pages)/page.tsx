@@ -184,7 +184,7 @@ export default function Home() {
             <span className="text-green-800"> Produtos de Alta Precisão</span>
           </h2>
           <div className="w-full  bg-gray-300 rounded-md mt-4 flex justify-center items-center mb-4">
-            <Video src="/video-home.mp4" />
+            <Video src="/video.mp4" />
           </div>
 
           <FormularioDialog></FormularioDialog>
