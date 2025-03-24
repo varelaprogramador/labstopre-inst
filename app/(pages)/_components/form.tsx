@@ -26,6 +26,8 @@ import { PhoneInput } from "./phone-input";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { useState } from "react";
+import * as fbq from "@/lib/fpixel";
+import { trackLead } from "@/lib/facebook-api";
 
 // Validação do formulário com zod
 const formSchema = z.object({
@@ -76,6 +78,15 @@ export default function FormularioDialog() {
         setIsOpen(false);
         form.reset();
 
+        // Track lead conversion with Facebook Pixel
+        fbq.lead();
+
+        // Track lead with Facebook Conversion API
+        await trackLead({
+          email: data.email,
+          phone: data.phone,
+        });
+
         toast.success("Dados enviados com sucesso!");
       } else {
         console.error("Erro ao enviar os dados:", response.statusText);
@@ -84,7 +95,6 @@ export default function FormularioDialog() {
     } catch (error) {
       console.error("Erro ao enviar os dados:", error);
     }
-
     try {
       const response = await fetch(
         `${
