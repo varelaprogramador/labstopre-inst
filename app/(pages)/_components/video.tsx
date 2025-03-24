@@ -30,6 +30,7 @@ const Video = ({ src, themeColor = '#00ff0c' }: VideoProps) => {
                 playsInline
                 ref={videoRef}
                 preload="none"
+
                 muted={isMuted}
                 controls={false}
                 disablePictureInPicture
