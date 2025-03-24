@@ -53,7 +53,7 @@ Equipe Labstore`;
     }) => {
       try {
         const config: AxiosRequestConfig = {
-          method: "post",
+          method: "POST",
           url: `${process.env.EVOLUTION_API_URL}/message/sendText/${
             evolutionInstance || process.env.EVOLUTION_INSTANCE_ID
           }`,
