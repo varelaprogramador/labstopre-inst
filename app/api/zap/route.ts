@@ -1,9 +1,21 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { NextRequest, NextResponse } from "next/server";
 
+// Tratamento do método OPTIONS (preflight CORS)
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
+}
+
 export async function POST(request: NextRequest) {
   try {
-    const data = await request.json(); // Ajustado para receber JSON corretamente
+    const data = await request.json();
 
     const name = data.name;
     const phones: string[] = Array.isArray(data.phone)
@@ -13,7 +25,12 @@ export async function POST(request: NextRequest) {
     if (!phones.length) {
       return NextResponse.json(
         { error: "Nenhum número de telefone fornecido" },
-        { status: 400 }
+        {
+          status: 400,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
       );
     }
 
@@ -48,7 +65,6 @@ Equipe Labstore`;
     }: {
       phones: string[];
       messages: string[];
-      evolutionInstance?: string;
     }) => {
       try {
         const config: AxiosRequestConfig = {
@@ -93,12 +109,25 @@ Equipe Labstore`;
       phones: phones,
     });
 
-    return NextResponse.json({ success: true }, { status: 200 });
+    return NextResponse.json(
+      { success: true },
+      {
+        status: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
+    );
   } catch (error) {
     console.error("Erro na API de leads:", error);
     return NextResponse.json(
       { error: "Erro interno do servidor" },
-      { status: 500 }
+      {
+        status: 500,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
     );
   }
 }

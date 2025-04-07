@@ -1,23 +1,24 @@
-import { Toaster } from 'sonner'
-import './globals.css'
-import Script from 'next/script'
-import { trackPageView } from '@/lib/facebook-api'
-import Image from 'next/image'
+import { Toaster } from "sonner";
+import "./globals.css";
+import Script from "next/script";
+import { trackPageView } from "@/lib/facebook-api";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   // Track page view on route change
-  if (typeof window !== 'undefined') {
-    trackPageView(window.location.href)
+  if (typeof window !== "undefined") {
+    trackPageView(window.location.href);
   }
 
   return (
     <html lang="en">
       <head>
-        <link
+        <Link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
@@ -44,7 +45,7 @@ export default function RootLayout({
           <Image
             height="1"
             width="1"
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
             src={`https://www.facebook.com/tr?id=${process.env.FB_PIXEL_ID}&ev=PageView&noscript=1`}
             alt=""
           />
@@ -55,5 +56,5 @@ export default function RootLayout({
         <Toaster richColors></Toaster>
       </body>
     </html>
-  )
+  );
 }
