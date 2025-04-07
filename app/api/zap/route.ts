@@ -45,7 +45,6 @@ Equipe Labstore`;
     const sendMultiplesWhatsappNotification = async ({
       phones,
       messages,
-      evolutionInstance,
     }: {
       phones: string[];
       messages: string[];
@@ -54,9 +53,7 @@ Equipe Labstore`;
       try {
         const config: AxiosRequestConfig = {
           method: "POST",
-          url: `${process.env.EVOLUTION_API_URL}/message/sendText/${
-            evolutionInstance || process.env.EVOLUTION_INSTANCE_ID
-          }`,
+          url: `${process.env.EVOLUTION_API_URL}/message/sendText/${process.env.EVOLUTION_INSTANCE_ID}`,
           headers: {
             "Content-Type": "application/json",
             apikey: process.env.EVOLUTION_API_KEY!,
