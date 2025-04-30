@@ -40,6 +40,24 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Google Ads Code */}
+        <Script
+          id="google-ads"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16606971895"
+        />
+        <Script
+          id="google-ads-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16606971895');
+            `,
+          }}
+        />
         <noscript>
           <Image
             height="1"
